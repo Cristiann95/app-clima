@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/swiffy-slider@1.6.0/dist/css/swiffy-slider.min.css" rel="stylesheet"
+        crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+    <title>Clima</title>
+</head>
+
+<body>
+
+    <div class="search">
+        <h1>Aplicación de clima</h1>
+        <input type="text" id="cityInput" placeholder="Ingrese una ciudad">
+        <button id="searchButton">Buscar</button>
+        <!-- <div id="responseData"></div> -->
+    </div>
+
+    <section class="container">
+        <section class="today">
+            <h2 class="title"></h2>
+            <p class="time"></p>
+            <div class="today-weather">
+                <p class="text"></p>
+                <img class="current_icon" src="" alt="Tiempo de hoy">
+                <p class="temp"></p>
+                <p class="wind"></p>
+            </div>
+
+        </section>
+        <section class="hourly">
+            <h3 class="title-hourly"></h3>
+            <div class="swiffy-slider slider-item-show6 slider-nav-outside slider-nav-dark slider-nav-sm slider-nav-visible slider-item-snapstart shadow-lg py-3 py-lg-4"
+                data-slider-nav-autoplay-interval="2000">
+                <div class="slider-container"></div>
+
+                <button type="button" class="slider-nav" aria-label="Go left"></button>
+                <button type="button" class="slider-nav slider-nav-next" aria-label="Go left"></button>
+
+            </div>
+        </section>
+        <section class="daily">
+            <h3 class="title-daily"></h3>
+        </section>
+    </section>
+    <footer class="footer"></footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/swiffy-slider@1.6.0/dist/js/swiffy-slider.min.js" crossorigin="anonymous"
+        defer></script>
+    <script type="module" src="script.js"></script>
+</body>
+
+</html>

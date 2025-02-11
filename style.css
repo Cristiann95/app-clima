@@ -1,0 +1,71 @@
+body {
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    background-color: rgb(12, 110, 146);
+    color: white;
+}
+
+.search {
+    max-width: 70%;
+    margin: 0 auto;
+    padding: 20px;
+    text-align: center;
+    background-color: rgb(8, 90, 119);
+    box-shadow: 0 2px 4px rgb(41, 45, 45);
+}
+
+h1 {
+    color: white;
+}
+
+input[type='text'] {
+    padding: 10px;
+    font-size: 16px;
+    width: 70%;
+}
+
+button {
+    padding: 10px 20px;
+    font-size: 16px;
+    background-color: rgb(71, 142, 149);
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+#respnseData {
+    margin-top: 20px;
+    font-size: 18px;
+}
+
+.today-weather {
+    display: flex;
+    gap: 20px;
+}
+
+.temp {
+    font-size: 1.5rem;
+}
+
+.detail-hour {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+}
+
+.slider-container {
+    /* height: 250px; */
+}
+
+.icon-hour {
+    width: 30%;
+    margin: auto;
+}
+
+.detail-hour div {
+    display: flex;
+}
+
+.detail-hour div p{
+    margin: 5px;
+}
