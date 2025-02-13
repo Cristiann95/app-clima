@@ -2,17 +2,18 @@ import API_KEY from "./apiKey.js";
 const urlBase = `https://www.meteosource.com/api/v1/free`;
 
 
-const container = document.querySelector('.container');
+// const container = document.querySelector('.container');
 const sectionToday = document.querySelector('.today');
 const title = document.querySelector('.title');
 const time = document.querySelector('.time');
 const divToday = document.querySelector('.today-weather');
 const sectionDaily = document.querySelector('.daily');
 const titleDaily = document.querySelector('.title-daily');
-const sectionHourly = document.querySelector('.hourly');
-const titleHourly = document.querySelector('.title-hourly');
+// const sectionHourly = document.querySelector('.hourly');
+// const titleHourly = document.querySelector('.title-hourly');
 const swiffySlider = document.querySelector('.swiffy-slider');
-const sliderContainer = document.querySelector('.slider-container'); { }
+const sliderContainer = document.querySelector('.slider-container');
+sectionToday.style.display = 'none';
 divToday.style.display = 'none';
 swiffySlider.style.display = 'none';
 sectionDaily.style.display = 'none';
@@ -46,8 +47,10 @@ function showWeatherData(data) {
     const currentWind = document.querySelector('.wind');
     const date = new Date()
     const days = ['Domingo', 'Lunes', 'Martes', 'Miércoles', 'Jueves', 'Viernes', 'Sábado'];
+    const months = ['Enero', 'Febrero', 'Marzo', 'Abril', 'Mayo', 'Junio', 'Julio', 'Agosto', 'Septiembre', 'Octubre', 'Noviembre', 'Diciembre'];
 
     // Today
+    sectionToday.style.display = 'block';
     divToday.style.display = 'flex';
     let cityName = document.getElementById('cityInput').value;
     let currentDay = days[date.getDay()]
@@ -62,7 +65,6 @@ function showWeatherData(data) {
     // Hourly
     swiffySlider.style.display = 'block';
     for (const hour of data.hourly.data) {
-        console.log(hour)
         const divHour = document.createElement('div');
         divHour.classList = 'detail-hour';
         divHour.innerHTML = `
@@ -78,13 +80,20 @@ function showWeatherData(data) {
     sectionDaily.style.display = 'block';
     titleDaily.style.display = 'block';
     for (const day of data.daily.data) {
+        function getDate(date) {
+            const dateSplit = date.split('-');
+            const dayIndex = new Date(dateSplit[0], dateSplit[1] - 1, dateSplit[2]).getDay();
+            const monthIndex = dateSplit[1] - 1;
+
+            return `${days[dayIndex]}, ${dateSplit[2]} de ${months[monthIndex]}`
+        }
         const divDay = document.createElement('div');
-        divHour.classList = 'detail-day';
+        divDay.classList = 'detail-day';
         divDay.innerHTML = `
-            <p>${day.day}</p>
-                <img class='icon-hour' src='./assets/img/small/${day.icon}.png' alt='icono de clima' />
+            <p>${((data.daily.data).indexOf(day) === 0) ? 'Hoy' : getDate(day.day)}</p>
+                <img class='icon-day' src='./assets/img/small/${day.icon}.png' alt='icono de clima' />
                 <p>${Math.round(day.all_day.temperature_min)}°/${Math.round(day.all_day.temperature_max)}°</p>
-                <div><img src='./assets/img/icons8-viento-30.png' /><p>${day.wind.speed}Km/h<p/></div>`
+                <div><img src='./assets/img/icons8-viento-30.png' /><p>${day.all_day.wind.speed}Km/h<p/></div>`
 
         sectionDaily.append(divDay);
     }

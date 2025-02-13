@@ -1,0 +1,31 @@
+.daily {
+    padding: 30px;
+
+    .detail-day {
+        display: flex;
+        justify-content: space-between;
+        background-color: rgb(8, 90, 119);
+        padding: 5px 15px;
+        margin-top: 10px;
+        border-radius: 5px;
+
+        & div {
+            display: flex;
+            justify-content: space-evenly;
+            width: 130px;
+            gap: 5px;
+        }
+
+        & .icon-day {
+            width: 50px;
+        }
+
+        & > p:nth-child(1) {
+            width: 230px;
+        }
+
+        & > p:nth-child(3) {
+            margin-inline: 30px;
+        }
+    }
+}

@@ -1,0 +1,23 @@
+.hourly {
+    margin-block: 30px;
+
+    .detail-hour {
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        align-items: center;
+
+        & .icon-hour {
+            width: 30%;
+            margin: auto;
+        }
+
+        & div {
+            display: flex;
+
+            & p {
+                margin: 5px;
+            }
+        }
+    }
+}
