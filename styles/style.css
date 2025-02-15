@@ -145,6 +145,7 @@ footer {
 }
 @media (max-width: 400px) {
   .search input {
+    font-size: 0.7rem;
     width: 50%;
   }
 }/*# sourceMappingURL=style.css.map */
