@@ -51,8 +51,14 @@ Para poder utilizar la aplicación en tu entorno local, sigue estos pasos:
 2.  Entra al directorio del proyecto:
     
     `cd app-clima` 
+
+3.  Necesitarás obtener una API key propia. Puedes obtenerla siguiendo estos pasos:
+
+        - Regístrate en [Meteosource API](https://meteosource.com).
+        - Crea una nueva API key.
+        - Copia la API key y pégala en una constante en un archivo en la raíz del proyecto. Luego impórtala y úsala, o directamente cópialo y pégalo en el llamado a la API.
     
-3.  Abre el archivo `index.html` en tu navegador para comenzar a usar la aplicación.
+4.  Abre el archivo `index.html` en tu navegador para comenzar a usar la aplicación.
     
 
 ## Uso

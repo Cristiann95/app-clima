@@ -1,3 +1,5 @@
 node_modules
 apiKey.js
 .vscode
+# Local Netlify folder
+.netlify
