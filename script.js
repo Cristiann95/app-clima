@@ -1,4 +1,5 @@
 import API_KEY from "./apiKey.js";
+const API_KEY = process.env.API_KEY;
 const urlBase = `https://www.meteosource.com/api/v1/free`;
 
 
