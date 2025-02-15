@@ -15,7 +15,7 @@
 
     <div class="search">
         <h1>Clima</h1>
-        <input type="text" id="cityInput" placeholder="Ingrese una ciudad">
+        <input type="text" id="cityInput" placeholder="Ingrese una ciudad o estado">
         <button id="searchButton">Buscar</button>
     </div>
 
@@ -25,9 +25,11 @@
             <p class="time"></p>
             <div class="today-weather">
                 <p class="text"></p>
-                <img class="current_icon" src="" alt="Tiempo de hoy">
-                <p class="temp"></p>
-                <p class="wind"></p>
+                <div class="today-temp">
+                    <img class="current_icon" src="" alt="Tiempo de hoy">
+                    <p class="temp"></p>
+                </div>
+                <div class="wind"></div>
             </div>
         </section>
 
@@ -49,6 +51,7 @@
     </section>
     <footer class="footer">Copyright ⓒ 2025 Cristian Bengardini</footer>
 
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     <script src="https://cdn.jsdelivr.net/npm/swiffy-slider@1.6.0/dist/js/swiffy-slider.min.js" crossorigin="anonymous"
         defer></script>
     <script type="module" src="script.js"></script>

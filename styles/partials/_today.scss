@@ -8,8 +8,19 @@
         display: flex;
         gap: 20px;
 
-        .temp {
-            font-size: 1.5rem;
+        .today-temp{
+            display: flex;
+            gap: 5px;
+
+            .temp {
+                font-size: 1.7rem;
+            }
+        }
+
+        .wind{
+            display: flex;
+            align-items: center;
+            gap: 5px;
         }
     }
 }

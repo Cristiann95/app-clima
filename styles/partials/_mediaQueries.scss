@@ -1,0 +1,30 @@
+@media (max-width:550px) {
+    .search {
+        flex-wrap: wrap;
+        justify-content: center;
+        max-width: 80%;
+        padding: 10px;
+
+        h1 {
+            width: 100%;
+            margin: 0;
+        }
+    }
+
+    .today-weather {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .detail-day {
+        flex-wrap: wrap;
+    }
+}
+
+@media (max-width:400px) {
+    .search {
+        input {
+            width: 50%;
+        }
+    }
+}
