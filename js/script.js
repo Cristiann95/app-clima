@@ -18,7 +18,7 @@ titleDaily.style.display = 'none'
 
 
 document.getElementById('searchButton').addEventListener('click', () => {
-    const city = document.getElementById('cityInput').value.split(' ');
+    const city = document.getElementById('cityInput').value.trim().split(' ');
     const fomattedCity = city.join('-');
     if (fomattedCity) {
         fetchWeather(fomattedCity);
